@@ -1,16 +1,39 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+text_file = open("Natural_Language_Processing_Text.txt")
 
+#Read the data :
+text = text_file.read()
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+#Datatype of the data read :
+print (type(text))
+print("\n")
 
+#Print the text :
+print(text)
+print("\n")
+#Length of the text :
+print (len(text))
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+import nltk
+from nltk import sent_tokenize
+from nltk import word_tokenize
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+#Tokenize the text by sentences :
+sentences = sent_tokenize(text)
+
+#How many sentences are there? :
+print (len(sentences))
+
+#Print the sentences :
+#print(sentences)
+print(sentences)
+
+#Tokenize the text with words :
+words = word_tokenize(text)
+
+#How many words are there? :
+print (len(words))
+print("\n")
+
+#Print words :
+print (words)
